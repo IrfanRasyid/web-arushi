@@ -6,7 +6,7 @@ const footerSocials = [
   { icon: SiYoutube, href: 'https://www.youtube.com/@ArushiCaelis', label: 'YouTube' },
   { icon: SiX, href: 'https://twitter.com/arushicaelis', label: 'Twitter' },
   { icon: SiInstagram, href: 'https://www.instagram.com/arushicaelis', label: 'Instagram' },
-  { icon: SiDiscord, href: 'https://discord.com/invite/arushicaelis', label: 'Discord' },
+  { icon: SiDiscord, href: 'https://discord.gg/KEsxGvy95b', label: 'Discord' },
 ]
 
 const footerLinks = [

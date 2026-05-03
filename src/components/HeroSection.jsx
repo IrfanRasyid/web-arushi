@@ -145,7 +145,7 @@ export default function HeroSection() {
             <SiYoutube size={13} /> Subscribe
           </a>
           <a
-            href="https://discord.com/invite/arushicaelis"
+            href="https://discord.gg/KEsxGvy95b"
             target="_blank" rel="noopener noreferrer"
             className="hero__social-btn hero__social-btn--dc"
             id="hero-discord-btn"
