@@ -5,7 +5,7 @@ import { FiExternalLink } from 'react-icons/fi'
 import { useYouTubeData } from '../hooks/useYouTubeData.jsx'
 import { formatSubscriberCount } from '../lib/youtube'
 import charImg from '../assets/char.png'
-import logoImg from '../assets/logo.png'
+import logoImg from '../assets/logo.svg'
 import './HeroSection.css'
 
 export default function HeroSection() {
@@ -21,7 +21,6 @@ export default function HeroSection() {
 
   const { scrollY } = useScroll()
 
-  // Scroll animations for desktop
   const bgTextY = useTransform(scrollY, [0, 800], [0, 350])
   const charY = useTransform(scrollY, [0, 800], [0, 150])
   const uiOpacity = useTransform(scrollY, [0, 400], [1, 0])
@@ -50,8 +49,8 @@ export default function HeroSection() {
         aria-hidden="true"
         style={{ y: isDesktop ? bgTextY : 0 }}
       >
-        <span className="hero__bg-word hero__bg-word--1">LIUNA</span>
-        <span className="hero__bg-word hero__bg-word--2">AUSTELLA</span>
+        <span className="hero__bg-word hero__bg-word--1">ARUSHI</span>
+        <span className="hero__bg-word hero__bg-word--2">CAELIS</span>
       </motion.div>
 
       {/* ── DECORATIVE UI SQUARES ── */}
@@ -77,15 +76,13 @@ export default function HeroSection() {
       >
         <img
           src={charImg}
-          alt="Liuna Austella"
+          alt="Arushi Caelis"
           className="hero__char-img"
           draggable={false}
         />
       </motion.div>
 
-      {/* ══════════════════════════════════
-          TOP-LEFT PANEL — Logo + channel
-      ══════════════════════════════════ */}
+      {/* TOP-LEFT PANEL — Logo + channel */}
       <motion.div
         className="hero__panel hero__panel--tl"
         initial={{ opacity: 0, x: -16 }}
@@ -93,16 +90,14 @@ export default function HeroSection() {
         transition={{ delay: 0.3, duration: 0.6 }}
         style={isDesktop ? { opacity: uiOpacity, y: uiY } : {}}
       >
-        <img src={logoImg} alt="Liuna Austella" className="hero__logo-small" draggable={false} />
+        <img src={logoImg} alt="Arushi Caelis" className="hero__logo-small" draggable={false} />
         <div className="hero__panel-line" />
         <div className="hero__channel-label">
           <span className="hero__channel-tag">INDIE VTUBER ID</span>
         </div>
       </motion.div>
 
-      {/* ══════════════════════════════════
-          TOP-RIGHT PANEL — Stats HUD
-      ══════════════════════════════════ */}
+      {/* TOP-RIGHT PANEL — Stats HUD */}
       <motion.div
         className="hero__panel hero__panel--tr"
         initial={{ opacity: 0, x: 16 }}
@@ -120,13 +115,11 @@ export default function HeroSection() {
         </div>
         <div className="hero__stat-row">
           <span className="hero__stat-key">SINCE</span>
-          <span className="hero__stat-val">2022</span>
+          <span className="hero__stat-val">2024</span>
         </div>
       </motion.div>
 
-      {/* ══════════════════════════════════
-          BOTTOM-LEFT PANEL — Bio + name stamp
-      ══════════════════════════════════ */}
+      {/* BOTTOM-LEFT PANEL — Bio + name stamp */}
       <motion.div
         className="hero__panel hero__panel--bl"
         initial={{ opacity: 0, x: -16 }}
@@ -135,16 +128,16 @@ export default function HeroSection() {
         style={isDesktop ? { opacity: uiOpacity, y: uiY } : {}}
       >
         <div className="hero__name-stamp">
-          <div className="hero__name-stamp-title">LIUNA AUSTELLA</div>
-          <div className="hero__name-stamp-sub">Chaotic Bunny 🐰⚡</div>
+          <div className="hero__name-stamp-title">ARUSHI CAELIS</div>
+          <div className="hero__name-stamp-sub">Runaway Kid ☘️</div>
         </div>
         <div className="hero__panel-line" />
         <p className="hero__bio-text">
-          An indie VTuber from Indonesia. Your Chaotic Bunny is back, ready to shake up your heart with brand-new charm! 🐰⚡
+          Hanya anak yang kabur dari habitatnya. An indie VTuber from Indonesia escaping into your world! ☘️
         </p>
         <div className="hero__social-row">
           <a
-            href="https://www.youtube.com/@Liuna_Austella?sub_confirmation=1"
+            href="https://www.youtube.com/@ArushiCaelis?sub_confirmation=1"
             target="_blank" rel="noopener noreferrer"
             className="hero__social-btn hero__social-btn--yt"
             id="hero-subscribe-btn"
@@ -152,7 +145,7 @@ export default function HeroSection() {
             <SiYoutube size={13} /> Subscribe
           </a>
           <a
-            href="https://discord.gg/EBut2ReqTa"
+            href="https://discord.com/invite/arushicaelis"
             target="_blank" rel="noopener noreferrer"
             className="hero__social-btn hero__social-btn--dc"
             id="hero-discord-btn"
@@ -162,9 +155,7 @@ export default function HeroSection() {
         </div>
       </motion.div>
 
-      {/* ══════════════════════════════════
-          BOTTOM-RIGHT PANEL — Tagline
-      ══════════════════════════════════ */}
+      {/* BOTTOM-RIGHT PANEL — Tagline */}
       <motion.div
         className="hero__panel hero__panel--br"
         initial={{ opacity: 0, x: 16 }}
@@ -172,12 +163,12 @@ export default function HeroSection() {
         transition={{ delay: 0.6, duration: 0.6 }}
         style={isDesktop ? { opacity: uiOpacity, y: uiY } : {}}
       >
-        <div className="hero__br-tag">CHAOTIC BUNNY</div>
+        <div className="hero__br-tag">RUNAWAY KID</div>
         <p className="hero__br-quote">
-          &ldquo;Ur chaotic bunny is here! Lovaliu let&apos;s go!&rdquo;
+          &ldquo;Hanya anak yang kabur dari habitatnya.&rdquo;
         </p>
         <a
-          href="https://www.youtube.com/@Liuna_Austella"
+          href="https://www.youtube.com/@ArushiCaelis"
           target="_blank" rel="noopener noreferrer"
           className="hero__br-link"
           id="hero-channel-btn"
@@ -186,7 +177,7 @@ export default function HeroSection() {
         </a>
       </motion.div>
 
-      {/* ── CENTER BOTTOM — horizontal divider with label ── */}
+      {/* CENTER BOTTOM — horizontal divider with label */}
       <motion.div
         className="hero__center-bar"
         initial={{ opacity: 0, scaleX: 0 }}
@@ -195,7 +186,7 @@ export default function HeroSection() {
         style={isDesktop ? { opacity: uiOpacity, y: uiY } : {}}
       >
         <div className="hero__center-line" />
-        <span className="hero__center-label">DEBUT · 20.04.2022</span>
+        <span className="hero__center-label">DEBUT · 2024 · INDIE VTUBER ID</span>
         <div className="hero__center-line" />
       </motion.div>
 

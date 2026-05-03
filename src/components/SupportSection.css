@@ -160,7 +160,7 @@
 .support__quote-panel {
   max-width: 700px;
   margin: 0 auto;
-  background: var(--color-pink);
+  background: var(--color-pink-deep);
   color: #fff;
   padding: 40px;
   text-align: center;
@@ -171,7 +171,7 @@
 }
 
 .support__quote-panel::before {
-  content: '🐰';
+  content: '☘️';
   position: absolute;
   top: -20px;
   left: 40px;

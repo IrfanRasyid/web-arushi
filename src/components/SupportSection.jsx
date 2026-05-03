@@ -7,61 +7,37 @@ const supportLinks = [
     id: 'trakteer',
     name: 'Trakteer',
     desc: 'Support with a virtual cup of coffee ☕',
-    href: 'https://trakteer.id/liuna_austella/gift',
-    emoji: '🎁',
+    href: 'https://trakteer.id/ArushiCaelis',
+    emoji: '☕',
     color: '#e85d04',
-  },
-  {
-    id: 'buylink',
-    name: 'Buylink',
-    desc: 'Support & get exclusive merch 🛒',
-    href: 'https://idol.buylink.id/LiunaAustella',
-    emoji: '🛒',
-    color: '#2ecc71',
   },
   {
     id: 'tako',
     name: 'Tako.id',
     desc: 'Support the daily stream grind 🐙',
-    href: 'https://tako.id/LiunaBwaBwa',
+    href: 'https://tako.id/ArushiCaelis',
     emoji: '🐙',
     color: '#9d4edd',
-  },
-  {
-    id: 'tiptap',
-    name: 'TipTap',
-    desc: 'Quick and easy direct tips 💸',
-    href: 'https://tiptap.gg/liuna_austella',
-    emoji: '💰',
-    color: '#00b4d8',
-  },
-  {
-    id: 'sociabuzz',
-    name: 'Sociabuzz',
-    desc: 'Join the tribe and support! ⚡',
-    href: 'https://sociabuzz.com/liunaaustella/tribe',
-    emoji: '⚡',
-    color: '#f1c40f',
   },
 ]
 
 export default function SupportSection() {
   return (
     <section id="support" className="support section">
-      
+
       {/* Background Watermark */}
       <div className="watermark-text support__watermark">SUPPORT</div>
 
       <div className="container">
-        
-        {/* Staggered Section Header */}
+
+        {/* Section Header */}
         <div className="support__header">
           <h2 className="support__title">
             <span className="support__title-line support__title-line--1">SUPPORT</span>
-            <span className="support__title-line support__title-line--2">LIUNA</span>
+            <span className="support__title-line support__title-line--2">ARUSHI</span>
           </h2>
           <div className="support__subtitle-box">
-            Every bit of support helps the stream grow! Thank you Lovaliu! 🐰⚡
+            Every bit of support helps the stream grow! Thank you SPeC! ☘️
           </div>
         </div>
 
@@ -79,7 +55,7 @@ export default function SupportSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="support-card__inner">
-                <div 
+                <div
                   className="support-card__icon-box"
                   style={{ backgroundColor: link.color }}
                 >
@@ -102,7 +78,7 @@ export default function SupportSection() {
         </div>
 
         {/* Decorative Quote Panel */}
-        <motion.div 
+        <motion.div
           className="support__quote-panel"
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -111,7 +87,7 @@ export default function SupportSection() {
           <div className="support__quote-text">
             "Your presence in the stream is the best support I could ask for. Let's make more memories together!"
           </div>
-          <div className="support__quote-author">— Liuna Austella</div>
+          <div className="support__quote-author">— Arushi Caelis</div>
         </motion.div>
       </div>
     </section>

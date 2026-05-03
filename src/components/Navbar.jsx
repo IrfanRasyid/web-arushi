@@ -3,14 +3,14 @@ import { motion } from 'framer-motion'
 import { SiYoutube, SiDiscord } from 'react-icons/si'
 import { useYouTubeData } from '../hooks/useYouTubeData.jsx'
 import { formatSubscriberCount } from '../lib/youtube'
-import logoImg from '../assets/logo.png'
+import logoImg from '../assets/logo.svg'
 import './Navbar.css'
 
 const tabs = [
   { label: 'Home', emoji: '🏠', href: '#hero' },
-  { label: 'About', emoji: '🐰', href: '#about' },
+  { label: 'About', emoji: '☘️', href: '#about' },
   { label: 'Ref', emoji: '🖼️', href: '#charsheet' },
-  { label: 'Support', emoji: '🎁', href: '#support' },
+  { label: 'Support', emoji: '☕', href: '#support' },
 ]
 
 export default function Navbar() {
@@ -51,7 +51,7 @@ export default function Navbar() {
         >
           <img
             src={logoImg}
-            alt="Liuna Austella"
+            alt="Arushi Caelis"
             className="top-bar__logo-img"
             draggable={false}
           />
@@ -72,7 +72,7 @@ export default function Navbar() {
             <span>Join</span>
           </div>
           <a
-            href="https://www.youtube.com/@Liuna_Austella?sub_confirmation=1"
+            href="https://www.youtube.com/@ArushiCaelis?sub_confirmation=1"
             target="_blank"
             rel="noopener noreferrer"
             className="top-bar__menu-btn"
@@ -106,7 +106,7 @@ export default function Navbar() {
 
         {/* Subscribe CTA slot */}
         <a
-          href="https://www.youtube.com/@Liuna_Austella?sub_confirmation=1"
+          href="https://www.youtube.com/@ArushiCaelis?sub_confirmation=1"
           target="_blank"
           rel="noopener noreferrer"
           className="bottom-tab-bar__subscribe"

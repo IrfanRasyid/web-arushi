@@ -1,53 +1,53 @@
 import { motion } from 'framer-motion'
-import { FiCalendar, FiMapPin } from 'react-icons/fi'
-import { GiLightningTrio, GiStarSwirl } from 'react-icons/gi'
-import { FaHeart, FaBolt } from 'react-icons/fa'
+import { FiMapPin } from 'react-icons/fi'
+import { FaGamepad, FaLeaf } from 'react-icons/fa'
+import { GiCrossedSwords, GiClover } from 'react-icons/gi'
 import aboutImg from '../assets/about.png'
 import './AboutSection.css'
 
 const traits = [
-  { icon: FaBolt, label: 'Chaotic Bunny', desc: 'Electric bunny ready to shake up your heart' },
-  { icon: GiStarSwirl, label: 'Electric Energy', desc: 'Full of chaotic sparks and charm' },
-  { icon: FiMapPin, label: 'Indonesia', desc: 'Indie VTuber ID scene' },
-  { icon: FaHeart, label: 'Lovaliu', desc: 'Fans called Lovaliu 🐰' },
+  { icon: FaGamepad, label: 'Gamer Vibes', desc: 'Gaming streams with chaotic energy' },
+  { icon: GiClover, label: 'Runaway Kid', desc: 'Hanya anak yang kabur dari habitatnya' },
+  { icon: FiMapPin, label: 'Indonesia', desc: 'Indie VTuber from ID scene' },
+  { icon: FaLeaf, label: 'SPeC', desc: 'Sekte Pemuja Cuih ☘️' },
 ]
 
 export default function AboutSection() {
   return (
     <section id="about" className="about section">
-      
+
       {/* Background Watermark */}
-      <div className="watermark-text about__watermark">LIUNA</div>
+      <div className="watermark-text about__watermark">ARUSHI</div>
 
       <div className="container">
-        
+
         {/* Staggered Section Header */}
         <div className="about__header">
           <h2 className="about__title">
             <span className="about__title-line about__title-line--1">ABOUT</span>
-            <span className="about__title-line about__title-line--2">LIUNA</span>
+            <span className="about__title-line about__title-line--2">ARUSHI</span>
           </h2>
           <div className="about__subtitle-box">
-            Your Chaotic Bunny who emerged to shake up your heart.
+            Hanya anak yang kabur dari habitatnya — just a kid who ran away from their habitat.
           </div>
         </div>
 
         <div className="about__content">
-          
+
           {/* LEFT: Character visual cut-out */}
-          <motion.div 
+          <motion.div
             className="about__visual"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
           >
             <div className="about__visual-bg" />
-            <img src={aboutImg} alt="Liuna" className="about__visual-img" />
+            <img src={aboutImg} alt="Arushi Caelis" className="about__visual-img" />
             <div className="about__visual-tag">DEBUT 2022</div>
           </motion.div>
 
           {/* RIGHT: Traits Grid */}
-          <motion.div 
+          <motion.div
             className="about__info"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -69,11 +69,12 @@ export default function AboutSection() {
 
             <div className="about__lore">
               <p>
-                As an independent VTuber, Liuna brings electric chaotic energy 
-                and the warmth of the Lovaliu family together. Her streams are always full of charm and surprises!
+                An indie VTuber from Indonesia who escaped into the streaming world.
+                Arushi Caelis brings gaming energy, casual chat, and wholesome chaos
+                to every stream — a runaway kid who found a home with SPeC (Sekte Pemuja Cuih)!
               </p>
             </div>
-            
+
             <div className="about__lore-decor">
               <span className="about__sq-decor" />
               <span className="about__sq-decor" />

@@ -1,63 +1,65 @@
 /* ============================================
-   LIUNA AUSTELLA — GLOBAL CSS
-   Chaotic Bunny Theme
+   ARUSHI CAELIS — GLOBAL CSS
+   Runaway Kid Theme
    ============================================ */
 
 /* --- DESIGN TOKENS --- */
 :root {
-  /* Color Palette — Chaotic Bunny Pastel */
-  --color-bg:            #EAF4FF;
-  --color-bg-deep:       #D9EDFF;
-  --color-bg-mid:        #E2F0FF;
-  --color-bg-lighter:    #F2F8FF;
-  --color-bg-surface:    #ffffff;
+  /* Color Palette — Arushi Caelis: Dark Gaming / Runaway Kid */
+  --color-bg:            #0D0E14;
+  --color-bg-deep:       #080A10;
+  --color-bg-mid:        #11131C;
+  --color-bg-lighter:    #181B27;
+  --color-bg-surface:    #1A1D2E;
 
   /* Panel / Card Colors */
-  --color-panel:         rgba(255, 255, 255, 0.92);
-  --color-panel-border:  rgba(255, 178, 206, 0.5);
-  --color-panel-shadow:  0 4px 20px rgba(255, 178, 206, 0.25);
-  --color-panel-hover:   rgba(255, 255, 255, 0.98);
+  --color-panel:         rgba(20, 23, 38, 0.95);
+  --color-panel-border:  rgba(57, 255, 20, 0.25);
+  --color-panel-shadow:  0 4px 20px rgba(57, 255, 20, 0.12);
+  --color-panel-hover:   rgba(20, 23, 38, 0.99);
 
   /* Accent Colors */
-  --color-pink:          #FF82A9;
-  --color-pink-light:    #FFB2CE;
-  --color-pink-deep:     #F05C8A;
-  --color-cyan:          #7EE0FF;
-  --color-cyan-deep:     #34BBE5;
-  --color-cyan-light:    #B2EFFF;
-  --color-gold:          #FFAE00;
-  --color-gold-deep:     #E69B00;
-  --color-purple:        #D7A8F0;
-  --color-purple-deep:   #A86BCB;
-  --color-green:         #80CBC4;
-  --color-orange:        #FFAB91;
+  --color-green:         #39FF14;
+  --color-green-light:   #7FFF60;
+  --color-green-deep:    #22CC00;
+  --color-cyan:          #00D4FF;
+  --color-cyan-deep:     #0099CC;
+  --color-cyan-light:    #80EAFF;
+  --color-gold:          #FFD700;
+  --color-gold-deep:     #E6B800;
+  --color-white:         #FFFFFF;
+  --color-off-white:     #E8ECFF;
+  /* Aliases for component reuse */
+  --color-pink:          #39FF14;
+  --color-pink-light:    #7FFF60;
+  --color-pink-deep:     #22CC00;
 
   /* Text Colors */
-  --color-text-dark:     #4A2E63;
-  --color-text-mid:      #6A4E85;
-  --color-text-soft:     #8C74A6;
-  --color-text-muted:    #B4A2C6;
-  --color-text-on-pink:  #fff;
-  --color-text-on-cyan:  #fff;
+  --color-text-dark:     #FFFFFF;
+  --color-text-mid:      #C8D4F0;
+  --color-text-soft:     #8899CC;
+  --color-text-muted:    #4A5580;
+  --color-text-on-pink:  #0D0E14;
+  --color-text-on-cyan:  #0D0E14;
 
   /* Gradients */
-  --gradient-bg:         linear-gradient(135deg, #D4F1F9 0%, #FFD6E5 50%, #E6D0F5 100%);
-  --gradient-pink:       linear-gradient(135deg, #FF82A9, #FFB2CE);
-  --gradient-cyan:       linear-gradient(135deg, #7EE0FF, #34BBE5);
-  --gradient-gold:       linear-gradient(135deg, #FFB732, #FFAE00);
-  --gradient-hero-title: linear-gradient(135deg, #FF82A9 0%, #D7A8F0 50%, #7EE0FF 100%);
-  --gradient-shimmer:    linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  --gradient-bg:         linear-gradient(135deg, #0D0E14 0%, #0F1520 50%, #0D0E14 100%);
+  --gradient-pink:       linear-gradient(135deg, #39FF14, #22CC00);
+  --gradient-cyan:       linear-gradient(135deg, #00D4FF, #0099CC);
+  --gradient-gold:       linear-gradient(135deg, #FFD700, #E6B800);
+  --gradient-hero-title: linear-gradient(135deg, #39FF14 0%, #00D4FF 50%, #39FF14 100%);
+  --gradient-shimmer:    linear-gradient(90deg, transparent, rgba(57,255,20,0.15), transparent);
 
   /* Glass Panel / Flat Card */
-  --glass-bg:            #ffffff;
-  --glass-border:        rgba(255, 178, 206, 0.6);
-  --glass-border-hover:  rgba(126, 224, 255, 0.8);
-  --glass-shadow:        4px 4px 0px rgba(255, 178, 206, 0.3);
-  --glass-glow:          none;
+  --glass-bg:            rgba(20, 23, 38, 0.9);
+  --glass-border:        rgba(57, 255, 20, 0.3);
+  --glass-border-hover:  rgba(0, 212, 255, 0.6);
+  --glass-shadow:        4px 4px 0px rgba(57, 255, 20, 0.2);
+  --glass-glow:          0 0 20px rgba(57, 255, 20, 0.15);
 
   /* Typography */
-  --font-heading: 'Nunito', 'M PLUS Rounded 1c', sans-serif;
-  --font-body:    'Nunito', 'M PLUS Rounded 1c', sans-serif;
+  --font-heading: 'Outfit', 'Rajdhani', sans-serif;
+  --font-body:    'Outfit', 'Inter', sans-serif;
 
   /* Spacing */
   --section-padding: 90px 0;
@@ -108,30 +110,29 @@ main {
   padding-top: 60px;
 }
 
-/* Diagonal stripes pattern overlay */
+/* Subtle diagonal scan-line overlay */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   background: repeating-linear-gradient(
     -45deg,
-    rgba(255, 255, 255, 0.35),
-    rgba(255, 255, 255, 0.35) 24px,
-    transparent 24px,
+    rgba(57, 255, 20, 0.015),
+    rgba(57, 255, 20, 0.015) 1px,
+    transparent 1px,
     transparent 48px
   );
   pointer-events: none;
   z-index: 0;
 }
 
-/* Subtle dot overlay for texture */
+/* Subtle dot grid overlay for texture */
 body::after {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.6) 2px, transparent 2px);
-  background-size: 48px 48px;
-  background-position: 0 0, 24px 24px;
+  background-image: radial-gradient(circle, rgba(57, 255, 20, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
   pointer-events: none;
   z-index: 0;
 }
@@ -194,12 +195,12 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-pink);
+  color: var(--color-green);
   margin-bottom: 14px;
   padding: 6px 16px;
-  border: 2px solid rgba(255, 107, 157, 0.35);
+  border: 2px solid rgba(57, 255, 20, 0.35);
   border-radius: var(--radius-pill);
-  background: rgba(255, 107, 157, 0.08);
+  background: rgba(57, 255, 20, 0.06);
 }
 
 .section-title {
@@ -244,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: italic;
   line-height: 0.85;
   color: transparent;
-  -webkit-text-stroke: 1.5px rgba(100, 180, 240, 0.12);
+  -webkit-text-stroke: 1.5px rgba(57, 255, 20, 0.06);
   pointer-events: none;
   z-index: 0;
   user-select: none;
@@ -268,29 +269,29 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary {
   background: var(--gradient-pink);
-  color: #fff;
-  box-shadow: 0 4px 20px rgba(255, 107, 157, 0.45);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #0D0E14;
+  box-shadow: 0 4px 20px rgba(57, 255, 20, 0.45);
+  border: 2px solid rgba(57, 255, 20, 0.4);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 8px 32px rgba(255, 107, 157, 0.6);
+  box-shadow: 0 8px 32px rgba(57, 255, 20, 0.6);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(20, 23, 38, 0.85);
   color: var(--color-text-mid);
   border: 2px solid var(--glass-border);
   backdrop-filter: blur(8px);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.95);
-  border-color: rgba(255, 107, 157, 0.4);
-  color: var(--color-pink-deep);
+  background: rgba(20, 23, 38, 0.95);
+  border-color: rgba(0, 212, 255, 0.5);
+  color: var(--color-cyan);
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(255, 107, 157, 0.2);
+  box-shadow: 0 6px 24px rgba(0, 212, 255, 0.2);
 }
 
 /* --- BADGE --- */
@@ -308,15 +309,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .badge-live {
   background: var(--gradient-pink);
-  color: #fff;
-  box-shadow: 0 2px 10px rgba(255, 107, 157, 0.4);
+  color: #0D0E14;
+  box-shadow: 0 2px 10px rgba(57, 255, 20, 0.4);
 }
 
 .badge-live::before {
   content: '';
   width: 6px;
   height: 6px;
-  background: rgba(255,255,255,0.9);
+  background: rgba(13, 14, 20, 0.9);
   border-radius: 50%;
   animation: pulse-dot 1.5s ease-in-out infinite;
 }
@@ -329,11 +330,11 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--color-bg-deep);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 107, 157, 0.35);
+  background: rgba(57, 255, 20, 0.3);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 107, 157, 0.6);
+  background: rgba(57, 255, 20, 0.6);
 }
 
 /* --- KEYFRAME ANIMATIONS --- */
@@ -421,7 +422,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Star decoration element */
 .star-deco {
   display: inline-block;
-  color: var(--color-gold);
+  color: var(--color-cyan);
   animation: star-twinkle 2.5s ease-in-out infinite;
 }
 
@@ -430,12 +431,12 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   pointer-events: none;
   font-size: 1rem;
-  color: var(--color-gold);
+  color: var(--color-green);
   animation: star-twinkle 3s ease-in-out infinite;
   opacity: 0.7;
 }
 
-/* Pink tab indicator */
+/* Green tab indicator */
 .tab-active-pill {
   background: var(--gradient-pink);
   border-radius: var(--radius-pill);
@@ -443,7 +444,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- SECTION ALT BACKGROUNDS --- */
 .section-alt {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(20, 23, 38, 0.5);
   backdrop-filter: blur(4px);
 }
 

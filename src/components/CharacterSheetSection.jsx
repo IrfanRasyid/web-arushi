@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion'
-import charSheetImg from '../assets/charsheet.jpg'
+import charSheetImg from '../assets/charsheet.png'
 import './CharacterSheetSection.css'
 
 export default function CharacterSheetSection() {
   return (
     <section id="charsheet" className="charsheet section">
       {/* Background Watermark Text */}
-      <div className="watermark-text charsheet__watermark-1">LIUNA</div>
-      <div className="watermark-text charsheet__watermark-2">AUSTELLA</div>
+      <div className="watermark-text charsheet__watermark-1">ARUSHI</div>
+      <div className="watermark-text charsheet__watermark-2">CAELIS</div>
 
       {/* Decorative Accent Squares */}
       <div className="charsheet__sq charsheet__sq--1" />
@@ -53,13 +53,13 @@ export default function CharacterSheetSection() {
 
           <img
             src={charSheetImg}
-            alt="Liuna Austella Character Sheet"
+            alt="Art by MashuAko"
             className="charsheet__img"
             loading="lazy"
           />
 
           <div className="charsheet__img-label">
-            ART BY @MashuAko
+            ARUSHI CAELIS — Art by MashuAko
           </div>
         </motion.div>
       </div>
